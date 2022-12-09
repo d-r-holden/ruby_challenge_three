@@ -1,4 +1,3 @@
-
 class PasswordManager2
 
     def initialize
