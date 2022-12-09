@@ -8,7 +8,7 @@ class PasswordManager2
     def add(service, password)
         if @passwords.has_key?(service) == false && @passwords.has_value?(password) == false
             return @passwords[service] = password
-        elsif 
+        elsif
             @passwords.has_key?(service)
             return "ERROR: Service names must be unique"
         else
@@ -21,14 +21,14 @@ class PasswordManager2
         @passwords.delete(service)
     end
 
-    def services 
+    def services
         return @passwords.keys
     end
 
     def sort_by(sort)
         if sort == "service"
             return @passwords.keys.sort
-        else 
+        else
             return @passwords.keys.reverse
         end
     end
@@ -43,5 +43,4 @@ class PasswordManager2
             return @passwords.merge!(new_password)
         end
     end
-
 end
